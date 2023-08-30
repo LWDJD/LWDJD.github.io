@@ -1,1 +1,64 @@
-Hello,Github.io
+<html>
+<head>
+<style>
+/*定义一个名为loader的类，用于设置加载动画的样式*/
+.loader {
+/*设置加载动画的宽度和高度为100像素*/
+width: 100px;
+height: 100px;
+/*设置加载动画的位置为页面中央*/
+position: absolute;
+top: 50%;
+left: 50%;
+/*设置加载动画的边框为10像素宽，灰色，圆形*/
+border: 10px solid gray;
+border-radius: 50%;
+/*设置加载动画的上边框为蓝色*/
+border-top: 10px solid blue;
+/*设置加载动画的动画效果为spin，持续2秒，无限循环*/
+animation: spin 2s infinite;
+}
+
+/*定义一个名为dot的类，用于设置加载动画中的圆点的样式*/
+.dot {
+/*设置圆点的宽度和高度为20像素*/
+width: 20px;
+height: 20px;
+/*设置圆点的背景颜色为蓝色*/
+background-color: blue;
+/*设置圆点为圆形*/
+border-radius: 50%;
+/*设置圆点的位置为加载动画的中心*/
+position: absolute;
+top: calc(50% - 10px);
+left: calc(50% - 10px);
+/*设置圆点的动画效果为bounce，持续1秒，无限循环*/
+animation: bounce 1s infinite;
+}
+
+/*定义一个名为spin的关键帧规则，用于控制加载动画的旋转效果*/
+@keyframes spin {
+/*从0%到100%，加载动画逐渐顺时针旋转360度*/
+from {transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+}
+
+/*定义一个名为bounce的关键帧规则，用于控制圆点的弹跳效果*/
+@keyframes bounce {
+/*从0%到50%，圆点逐渐向右移动30像素，并缩小一半*/
+0%,50% {transform: translateX(0px) scale(1);}
+/*从25%到75%，圆点逐渐向左移动30像素，并放大一倍*/
+25%,75% {transform: translateX(30px) scale(2);}
+/*从50%到100%，圆点逐渐向右移动30像素，并缩小一半*/
+50%,100% {transform: translateX(0px) scale(1);}
+}
+</style>
+</head>
+<body>
+<!--在body中创建一个div元素，应用loader类-->
+<div class="loader">
+<!--在div元素中创建一个span元素，应用dot类-->
+<span class="dot"></span>
+</div>
+</body>
+</html>
