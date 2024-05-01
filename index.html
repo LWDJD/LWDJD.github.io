@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>展示图片</title>
     <style>
-        /* 添加CSS样式来禁用页面滑动 */
         body {
             overflow: hidden;
+            margin: 0; /* 确保body没有默认的margin */
+            padding: 0; /* 确保body没有默认的padding */
+            display: flex; /* 使用flexbox居中图片 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+        img {
+            max-width: 100%; /* 确保图片最大宽度不超过屏幕宽度 */
+            max-height: 100%; /* 确保图片最大高度不超过屏幕高度 */
         }
     </style>
 </head>
